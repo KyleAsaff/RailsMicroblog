@@ -5,6 +5,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:michael)
+    @otheruser = users(:lana)
   end
 
   test "profile display" do
@@ -19,4 +20,22 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
       assert_match micropost.content, response.body
     end
   end
+
+  test "profile stats" do
+    get user_path(@user)
+    assert_template 'users/show'
+    assert_select '#following', @user.following.count.to_s
+    assert_select '#followers', @user.followers.count.to_s
+  end
+
+  test "home profile stats" do
+    get login_path
+    post login_path, session: { email: @user.email, password: 'password' }
+    assert is_logged_in?
+    get root_path
+    assert_template 'static_pages/home'
+    assert_select '#following', @user.following.count.to_s
+    assert_select '#followers', @user.followers.count.to_s
+  end
+
 end
