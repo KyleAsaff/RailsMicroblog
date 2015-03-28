@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_filter :force_www!
-
+  
   private
 
   	# Confirms logged-in user.
