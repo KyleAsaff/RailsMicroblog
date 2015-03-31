@@ -7,3 +7,4 @@ This is a fully functioning and completed Ruby on Rails Microblog based off Mich
 - Ability to follow/unfollow users.
 - Ability to micropost with text and images.
 - Functioning news feed.
+- Admin privileges.
