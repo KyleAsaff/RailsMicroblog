@@ -1,6 +1,6 @@
 # Ruby on Rails Microblog
 
-This project is a fully functioning and completed Ruby on Rails Microblog based off Michael Heartl's Ruby on Rails Book. 
+This project is a fully functioning and complete Ruby on Rails Microblog based on Michael Heartl's Ruby on Rails Book. 
 A live demo of this project can be viewed at http://tweetr.kylesbox.com.
 
 # Features
