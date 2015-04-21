@@ -8,4 +8,4 @@ A live demo of this project can be viewed at http://tweetr.kylesbox.com.
 - Ability to follow/unfollow users.
 - Ability to micropost with text and images.
 - Functioning news feed.
-- Admin privileges.
+- Admin privileges to delete users and posts from the system.
